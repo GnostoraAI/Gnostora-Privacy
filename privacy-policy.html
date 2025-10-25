@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Parsight by Gnostora AI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 1.5em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #34495e;
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .meta-info {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+        }
+
+        .highlight {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
+        }
+
+        .contact-info {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo img {
+            max-width: 300px;
+            height: auto;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        strong {
+            color: #2c3e50;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            .logo img {
+                max-width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="fulllogo.png" alt="Gnostora AI Logo">
+        </div>
+        <h1>Privacy Policy</h1>
+        <div class="meta-info">
+            <p><strong>Application:</strong> Parsight (Google Drive integration: GnostoraDrive)</p>
+            <p><strong>Developer:</strong> Gnostora AI</p>
+            <p><strong>Last Updated:</strong> October 25, 2025</p>
+        </div>
+
+        <div class="highlight">
+            <p><strong>In Short:</strong> Parsight uses Google Drive integration (GnostoraDrive) to help you process your documents. We only access files you explicitly select, we encrypt your credentials, and we never share your data with third parties.</p>
+        </div>
+
+        <div class="section">
+            <h2>What This Policy Covers</h2>
+            <p>This privacy policy explains how Parsight accesses and uses your Google Drive data when you choose to connect your Google Drive account to our service.</p>
+        </div>
+
+        <div class="section">
+            <h2>What We Access from Google Drive</h2>
+
+            <h3>Files You Select</h3>
+            <ul>
+                <li><strong>What we access:</strong> Only the files and folders you explicitly select for document processing</li>
+                <li><strong>Permission level:</strong> Read-only access to your Google Drive files</li>
+                <li><strong>How we use it:</strong> We download selected files to our secure storage for workflow processing</li>
+                <li><strong>What we DON'T do:</strong> We do not scan, access, or read any files you haven't explicitly selected</li>
+            </ul>
+
+            <h3>Your Email Address</h3>
+            <ul>
+                <li><strong>What we access:</strong> Your email address and basic profile information</li>
+                <li><strong>How we use it:</strong> To show you which Google account is connected in your settings</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>How We Use Your Data</h2>
+
+            <h3>File Processing</h3>
+            <ol>
+                <li>You select files from Google Drive through our file picker</li>
+                <li>We download those files to our secure AWS S3 storage</li>
+                <li>Files are processed through your selected document analysis workflows</li>
+                <li>Processed results are stored in your Parsight account</li>
+                <li>Your original files in Google Drive remain unchanged</li>
+            </ol>
+
+            <h3>Access Credentials</h3>
+            <ul>
+                <li>We store encrypted OAuth access tokens to maintain your Google Drive connection</li>
+                <li>Tokens are encrypted using industry-standard Fernet encryption</li>
+                <li>Tokens are stored securely in our PostgreSQL database</li>
+                <li>Tokens are only used when you explicitly initiate a workflow</li>
+                <li>Tokens are immediately deleted when you disconnect Google Drive</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Data Storage & Security</h2>
+
+            <h3>Where Your Data Is Stored</h3>
+            <ul>
+                <li><strong>Google Drive Tokens:</strong> Encrypted in our PostgreSQL database</li>
+                <li><strong>Downloaded Files:</strong> Secure AWS S3 storage with access controls</li>
+                <li><strong>File Metadata:</strong> Our database for tracking processing history</li>
+            </ul>
+
+            <h3>Security Measures</h3>
+            <ul>
+                <li>All data transmitted over HTTPS/TLS encryption</li>
+                <li>OAuth tokens encrypted at rest</li>
+                <li>Access controls ensure you can only see your organization's data</li>
+                <li>Regular security updates and monitoring</li>
+            </ul>
+
+            <h3>Data Retention</h3>
+            <ul>
+                <li><strong>Files:</strong> Retained according to your Parsight account settings</li>
+                <li><strong>Tokens:</strong> Deleted immediately when you disconnect Google Drive</li>
+                <li><strong>Metadata:</strong> Retained for audit purposes</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Your Rights & Controls</h2>
+
+            <h3>You Can:</h3>
+            <ul>
+                <li><strong>Disconnect anytime:</strong> Remove Parsight's access from your Parsight settings</li>
+                <li><strong>Revoke access:</strong> Disconnect from <a href="https://myaccount.google.com/permissions" target="_blank">Google Account settings</a></li>
+                <li><strong>Delete your data:</strong> Contact us to request deletion of all your data</li>
+                <li><strong>View connections:</strong> See which Google account is connected in settings</li>
+            </ul>
+
+            <h3>We Do NOT:</h3>
+            <ul>
+                <li>Access files you haven't selected</li>
+                <li>Share your Google Drive files with anyone</li>
+                <li>Use your files for AI training or any purpose other than your workflows</li>
+                <li>Store your Google Drive password (we use OAuth tokens)</li>
+                <li>Modify or delete files in your Google Drive</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Google API Services User Data Policy</h2>
+            <p>Parsight's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+            <p>Specifically:</p>
+            <ul>
+                <li>We only access Google Drive data necessary for features you explicitly request</li>
+                <li>We do not use Google Drive data for advertising</li>
+                <li>We do not allow humans to read your data unless:
+                    <ul>
+                        <li>You explicitly consent for a specific support case</li>
+                        <li>It's necessary for security (investigating abuse)</li>
+                        <li>Required by law</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Third-Party Services</h2>
+
+            <h3>Amazon Web Services (AWS)</h3>
+            <p>We use AWS S3 for secure file storage. Files are stored in access-controlled buckets.</p>
+            <p>AWS Privacy Policy: <a href="https://aws.amazon.com/privacy/" target="_blank">https://aws.amazon.com/privacy/</a></p>
+
+            <h3>No Other Sharing</h3>
+            <p>We do <strong>NOT</strong> share your Google Drive data with any other third parties. We do <strong>NOT</strong> sell or rent your data.</p>
+        </div>
+
+        <div class="section">
+            <h2>Changes to This Policy</h2>
+            <p>We may update this privacy policy occasionally. When we do, we will:</p>
+            <ul>
+                <li>Update the "Last Updated" date at the top</li>
+                <li>Post a notice in the application</li>
+                <li>Send an email to your registered address for material changes</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Data Deletion</h2>
+            <p>To request deletion of your data:</p>
+            <ol>
+                <li>Disconnect Google Drive from your Parsight settings</li>
+                <li>Contact us to request full data deletion</li>
+                <li>We will delete all your data within 30 days</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Compliance</h2>
+            <p>This privacy policy complies with:</p>
+            <ul>
+                <li>Google API Services User Data Policy</li>
+                <li>General Data Protection Regulation (GDPR) for EU users</li>
+                <li>California Consumer Privacy Act (CCPA) for California users</li>
+                <li>Other applicable data protection laws</li>
+            </ul>
+        </div>
+
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>If you have questions about this privacy policy or our data practices:</p>
+            <p><strong>Email:</strong> <a href="mailto:support@gnostora.ai">support@gnostora.ai</a></p>
+            <p><strong>Website:</strong> <a href="https://gnostora.ai" target="_blank">https://gnostora.ai</a></p>
+        </div>
+
+        <div class="section">
+            <h2>Consent</h2>
+            <p>By connecting your Google Drive account to Parsight, you consent to the collection and use of your data as described in this privacy policy.</p>
+        </div>
+    </div>
+</body>
+</html>
